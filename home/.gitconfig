@@ -1,0 +1,10 @@
+[color]
+	ui = true
+[core]
+	excludesfile = /home/joris/.gitignore
+	editor = vim
+[user]
+	name = Joris Kraak
+	email = me@joriskraak.nl
+[push]
+	default = matching
