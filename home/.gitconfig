@@ -3,8 +3,10 @@
 [core]
 	excludesfile = /home/joris/.gitignore
 	editor = vim
-[user]
-	name = Joris Kraak
-	email = me@joriskraak.nl
+[pull]
+  rebase = true # http://mislav.uniqpath.com/2013/02/merge-vs-rebase/
 [push]
 	default = matching
+[user]
+  name = Joris Kraak
+	email = me@joriskraak.nl
