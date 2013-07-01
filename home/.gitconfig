@@ -1,12 +1,11 @@
 [color]
-	ui = true
+  ui = true
 [core]
-	excludesfile = /home/joris/.gitignore
-	editor = vim
+  excludesfile = /home/joris/.gitignore
+  editor = vim
 [pull]
   rebase = true # http://mislav.uniqpath.com/2013/02/merge-vs-rebase/
 [push]
-	default = matching
+  default = matching
 [user]
   name = Joris Kraak
-	email = me@joriskraak.nl
