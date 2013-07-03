@@ -49,3 +49,6 @@ source $ZSH/oh-my-zsh.sh
 # Add rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init - --no-rehash)"
+
+# Initialize tmuxinator if available
+[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
