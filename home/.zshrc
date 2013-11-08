@@ -47,6 +47,9 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
+# Make home binaries available
+export PATH="$HOME/local/bin:$PATH"
+
 # Add rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init - --no-rehash)"
