@@ -58,3 +58,6 @@ eval "$(rbenv init - --no-rehash)"
 
 # Initialize tmuxinator if available
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
+
+# Force n to install node versions into the home directory
+export N_PREFIX=~/local
