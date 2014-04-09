@@ -3,6 +3,7 @@
 [core]
   excludesfile = /home/joris/.gitignore
   editor = vim
+  autocrlf = input # Convert CRLF to LF on commit, not on checkout
 [pull]
   rebase = true # http://mislav.uniqpath.com/2013/02/merge-vs-rebase/
 [push]
