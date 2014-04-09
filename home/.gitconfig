@@ -11,3 +11,5 @@
 [user]
   name = Joris Kraak
   email = me@joriskraak.nl
+[alias]
+  today = !git log --since=midnight --author=\"$(git config user.name)\" --oneline
