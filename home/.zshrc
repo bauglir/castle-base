@@ -47,6 +47,8 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
+export EDITOR=vim
+
 # Make home binaries available
 export PATH="$HOME/local/bin:$PATH"
 
