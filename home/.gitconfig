@@ -13,5 +13,6 @@
   email = me@joriskraak.nl
 [alias]
   today = !git log --since=midnight --author=\"$(git config user.name)\" --oneline
+  lt = log --graph --oneline --decorate --all
 [github]
   user = bauglir
