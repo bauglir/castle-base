@@ -1,3 +1,6 @@
+# Julia/IJlulia
+.ipynb_checkpoints
+
 # Rails Ignore
 *.rbc
 *.sassc
