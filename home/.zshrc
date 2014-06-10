@@ -56,6 +56,10 @@ export PATH="$HOME/local/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init - --no-rehash)"
 
+# Add the Android Development Tools to the path if they are available
+ADT_SDK_PATH=$HOME/local/adt/sdk
+[[ -d $ADT_SDK_PATH ]] && export PATH="$ADT_SDK_PATH/platform-tools:$ADT_SDK_PATH/tools:$PATH"
+
 # Initialize tmuxinator if available
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 
