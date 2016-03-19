@@ -33,6 +33,9 @@
 [github]
   user = bauglir
 
+[help]
+  autocorrect = 1
+
 [pull]
   rebase = true # http://mislav.uniqpath.com/2013/02/merge-vs-rebase/
 
