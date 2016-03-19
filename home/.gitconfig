@@ -1,18 +1,23 @@
+[alias]
+  today = !git log --since=midnight --author=\"$(git config user.name)\" --oneline
+  lt = log --graph --oneline --decorate --all
+
 [color]
   ui = true
 [core]
   excludesfile = ~/.gitignore
   editor = vim
   autocrlf = input # Convert CRLF to LF on commit, not on checkout
+
+[github]
+  user = bauglir
+
 [pull]
   rebase = true # http://mislav.uniqpath.com/2013/02/merge-vs-rebase/
+
 [push]
   default = matching
+
 [user]
   name = Joris Kraak
   email = me@joriskraak.nl
-[alias]
-  today = !git log --since=midnight --author=\"$(git config user.name)\" --oneline
-  lt = log --graph --oneline --decorate --all
-[github]
-  user = bauglir
