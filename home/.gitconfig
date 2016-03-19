@@ -36,6 +36,11 @@
 [help]
   autocorrect = 1
 
+[pager]
+  # Needs to be installed using `npm install -g diff-so-fancy`
+  diff = diff-so-fancy | less --tabs=2 -RFX
+  show = diff-so-fancy | less --tabs=2 -RFX
+
 [pull]
   rebase = true # http://mislav.uniqpath.com/2013/02/merge-vs-rebase/
 
