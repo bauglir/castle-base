@@ -1,0 +1,18 @@
+#!/bin/bash
+
+EXECUTION_DATE=$(date +%Y%m%d%H%M%S)
+FPS=2
+
+if [ -f "$1" ]; then
+  mkdir -p /tmp/frames/$EXECUTION_DATE
+
+  ffmpeg -i "$1" -r $FPS "/tmp/frames/$EXECUTION_DATE/frame-%03d.jpg"
+
+  convert -delay 1x$FPS -depth 8 -loop 0 -scale 50% "/tmp/frames/$EXECUTION_DATE/*.jpg" converted.gif
+
+  exit 0
+else
+  echo "Please specify an mp4 file to convert `convert-mp4-to-gif <path_to_file.mp4>`"
+
+  exit 1
+fi
