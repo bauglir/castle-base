@@ -1,0 +1,17 @@
+#!/usr/bin/env sh
+borg create --compression lz4 \
+            --stats \
+            --verbose \
+
+            --exclude ~/Documents/Dropbox* \
+            --exclude ~/Documents/MATLAB \
+            --exclude '/etc/apt/sources.list.d/*.save'
+
+            /media/$(id -un)/Backup/backups::$(hostname)-$(date +%Y%m%d%H%M%S)\
+            ~/Desktop \
+            ~/Documents \
+            ~/Pictures \
+            ~/Projects \
+            ~/Videos \
+            ~/VirtualBox\ VMs \
+            /etc/apt/sources.list.d/
