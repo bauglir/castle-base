@@ -45,7 +45,7 @@
   rebase = true # http://mislav.uniqpath.com/2013/02/merge-vs-rebase/
 
 [push]
-  default = matching
+  default = current
 
 [user]
   name = Joris Kraak
