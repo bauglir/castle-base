@@ -69,3 +69,5 @@ ANDROID_SDK_PATH=$HOME/local/android
 
 # Force n to install node versions into the home directory
 export N_PREFIX=~/local
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
