@@ -10,6 +10,7 @@ ZSH_THEME="gnzh"
 # Aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias gds="git diff --staged"
 alias ta="tig --all"
 
 # Set to this to use case-sensitive completion
