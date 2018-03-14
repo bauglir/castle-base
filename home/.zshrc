@@ -70,4 +70,14 @@ ANDROID_SDK_PATH=$HOME/local/android
 # Force n to install node versions into the home directory
 export N_PREFIX=~/local
 
+# Configure fzf if installed and instruct it to use the_silver_searcher
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+if (command -v fzf >/dev/null 2>&1 && command -v ag >/dev/null 2>&1); then
+  export FZF_DEFAULT_COMMAND='ag --nocolor -g ""'
+  export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+  export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND"
+  export FZF_DEFAULT_OPTS='
+    --color fg:242,bg:236,hl:65,fg+:15,bg+:239,hl+:108
+    --color info:108,prompt:109,spinner:108,pointer:168,marker:168
+  '
+fi
