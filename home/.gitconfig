@@ -50,3 +50,5 @@
 [user]
   name = Joris Kraak
   email = me@joriskraak.nl
+[commit]
+  gpgsign = true
