@@ -45,7 +45,7 @@ alias ta="tig --all"
 #
 # Note that history-substring-search is the last plugin loaded, since otherwise
 # it tends to break easily
-plugins=(git knife tmux tmuxinator vi-mode vagrant history-substring-search)
+plugins=(git knife tmux tmuxinator vi-mode vagrant vundle history-substring-search)
 
 source $ZSH/oh-my-zsh.sh
 
