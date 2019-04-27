@@ -4,3 +4,6 @@ system '~/.fzf/install --key-bindings --completion --no-bash --no-fish --no-upda
 
 # Install node if necessary
 system './install-node'
+
+# Install up diff-so-fancy for better Git diffs
+system 'npm install -g diff-so-fancy'
