@@ -1,3 +1,6 @@
 # Call the installation of fzf. Updating the shell scripts is skipped as the
 # configuration is already included in the dotfiles
 system '~/.fzf/install --key-bindings --completion --no-bash --no-fish --no-update-rc'
+
+# Install node if necessary
+system './install-node'

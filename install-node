@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+if [ ! $(command -v node) ]; then
+  curl -O https://nodejs.org/dist/latest-v10.x/node-v10.15.3-linux-x64.tar.gz
+  mkdir node-initial-install
+  tar xf node*.tar.gz -C node-initial-install --strip-components=1
+
+  export PATH="$(pwd)/node-initial-install/bin:$PATH"
+  npm install -g n
+  N_PREFIX=~/local n stable
+
+  rm -rf node-*
+fi
