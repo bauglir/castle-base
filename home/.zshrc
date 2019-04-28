@@ -73,7 +73,7 @@ export N_PREFIX=~/local
 # Configure fzf if installed and instruct it to use the_silver_searcher
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 if (command -v fzf >/dev/null 2>&1 && command -v ag >/dev/null 2>&1); then
-  export FZF_DEFAULT_COMMAND='ag --nocolor -g ""'
+  export FZF_DEFAULT_COMMAND='ag --nocolor --ignore node_modules -g ""'
   export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
   export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND"
   export FZF_DEFAULT_OPTS='
