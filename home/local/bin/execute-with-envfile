@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+
+ENV_FILE=$1
+
+if [ -e $ENV_FILE ]; then
+  shift
+  eval $(cat "$ENV_FILE") "$@"
+else
+  echo "Unknown environment file '$ENV_FILE' specified"
+fi
