@@ -1,3 +1,7 @@
+development_path = join([ homedir(), "Projects", "julia" ], "/")
+ENV["JULIA_PKG_DEVDIR"] = development_path
+push!(LOAD_PATH, development_path)
+
 packagesToLoad = Dict{String,Function}(
   "OhMyREPL" => () -> @async begin
     @eval using OhMyREPL
