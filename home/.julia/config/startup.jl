@@ -3,7 +3,7 @@ ENV["JULIA_PKG_DEVDIR"] = development_path
 push!(LOAD_PATH, development_path)
 
 packagesToLoad = Dict{String,Function}(
-  "OhMyREPL" => () -> @async begin
+  "OhMyREPL" => () -> begin
     @eval using OhMyREPL
   end,
 
@@ -16,7 +16,7 @@ packagesToLoad = Dict{String,Function}(
 atreplinit() do repl
   foreach(packagesToLoad) do (name, fn)
     try
-      fn()
+      @async fn()
     catch exception
       printstyled(
         "Error loading $name\n$(sprint(showerror, exception))\n",
