@@ -1,0 +1,34 @@
+#!/usr/bin/env sh
+
+ALPINE_IMAGE="alpine:3.9"
+
+command -v docker >/dev/null 2>&1
+DOCKER_AVAILABLE=$?
+
+if [ $# -lt 2 ] || [ $# -gt 3 ]; then
+  echo "Usage: $(basename $0) <volume_name> <source_path> <<target_path>>"
+elif [ $DOCKER_AVAILABLE -ne 0 ]; then
+  echo "Docker is required to use this command"
+else
+  VOLUME_NAME=$1
+  SOURCE_PATH=$(readlink -e $2)
+  TARGET_PATH="${3-$(basename $SOURCE_PATH)}"
+
+  docker volume inspect "$VOLUME_NAME" >/dev/null 2>&1
+  VOLUME_EXISTS=$?
+
+  if [ $VOLUME_EXISTS -ne 0 ]; then
+    echo "The volume $VOLUME_NAME does not exist. Create it first using \`docker volume create $VOLUME_NAME\`."
+  else
+    docker run -it --rm \
+               --volume "$VOLUME_NAME:/target" \
+               --volume "$SOURCE_PATH:/source" \
+               alpine:3.9 sh -c "cp -r /source /target/$TARGET_PATH"
+
+    echo "Copied '$SOURCE_PATH' to '$1:/$TARGET_PATH'"
+
+    exit 0
+  fi
+fi
+
+exit 1
