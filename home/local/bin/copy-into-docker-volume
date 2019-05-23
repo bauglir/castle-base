@@ -23,7 +23,7 @@ else
     docker run -it --rm \
                --volume "$VOLUME_NAME:/target" \
                --volume "$SOURCE_PATH:/source" \
-               alpine:3.9 sh -c "cp -r /source /target/$TARGET_PATH"
+               $ALPINE_IMAGE sh -c "cp -r /source /target/$TARGET_PATH"
 
     echo "Copied '$SOURCE_PATH' to '$1:/$TARGET_PATH'"
 
