@@ -6,13 +6,13 @@ command -v docker >/dev/null 2>&1
 DOCKER_AVAILABLE=$?
 
 if [ $# -lt 2 ] || [ $# -gt 3 ]; then
-  echo "Usage: $(basename $0) <volume_name> <source_path> <<target_path>>"
+  echo "Usage: $(basename "$0") <volume_name> <source_path> <<target_path>>"
 elif [ $DOCKER_AVAILABLE -ne 0 ]; then
   echo "Docker is required to use this command"
 else
-  VOLUME_NAME=$1
-  SOURCE_PATH=$(readlink -e $2)
-  TARGET_PATH="${3-$(basename $SOURCE_PATH)}"
+  VOLUME_NAME="$1"
+  SOURCE_PATH=$(readlink -e "$2")
+  TARGET_PATH="${3-$(basename "$SOURCE_PATH")}"
 
   docker volume inspect "$VOLUME_NAME" >/dev/null 2>&1
   VOLUME_EXISTS=$?
