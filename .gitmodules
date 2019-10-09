@@ -4,6 +4,3 @@
 [submodule "home/.rbenv"]
 	path = home/.rbenv
 	url = https://github.com/sstephenson/rbenv.git
-[submodule "home/.fzf"]
-	path = home/.fzf
-	url = https://github.com/junegunn/fzf.git
