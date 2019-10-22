@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-MATLAB_BASE=~/local/MATLAB
+MATLAB_BASE=/usr/local/MATLAB
 MATLAB_OPTS="-desktop"
 
 if [ -d $MATLAB_BASE ]; then
