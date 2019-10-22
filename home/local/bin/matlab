@@ -8,7 +8,7 @@ if [ -d $MATLAB_BASE ]; then
   if [ ! "$MATLAB_VERSION" ]; then
     MATLAB_VERSION=$(find $MATLAB_BASE -maxdepth 1 -type d | tail -n 1 | rev | cut -d '/' -f1 | rev)
   fi;
-  $MATLAB_BASE/"$MATLAB_VERSION"/bin/matlab $MATLAB_OPTS
+  "$MATLAB_BASE/$MATLAB_VERSION/bin/matlab" "$MATLAB_OPTS"
 else
   echo "MATLAB is not available in the expected location $MATLAB_BASE"
 fi
