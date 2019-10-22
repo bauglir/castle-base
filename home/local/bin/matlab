@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 MATLAB_BASE=~/local/MATLAB
-MATLAB_OPTS="-desktop -nosoftwareopengl"
+MATLAB_OPTS="-desktop"
 
 if [ -d $MATLAB_BASE ]; then
   MATLAB_VERSION=$1
