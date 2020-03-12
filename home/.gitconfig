@@ -52,3 +52,5 @@
   email = me@joriskraak.nl
 [commit]
   gpgsign = true
+[fetch]
+  prune = true
