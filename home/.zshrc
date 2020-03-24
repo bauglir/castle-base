@@ -45,7 +45,7 @@ alias ta="tig --all"
 #
 # Note that history-substring-search is the last plugin loaded, since otherwise
 # it tends to break easily
-plugins=(docker-compose git kubectl tmux vi-mode history-substring-search)
+plugins=(docker-compose git kubectl tmux vi-mode zsh-autosuggestions history-substring-search)
 
 source $ZSH/oh-my-zsh.sh
 
