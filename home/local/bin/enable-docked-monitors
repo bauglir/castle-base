@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+# Execute all commands relative to the location of the script
+cd "$(dirname "${BASH_SOURCE[0]}")"
+
+# Download gnome-randr if it's not locally available
+GNOME_RANDR_URI=https://gitlab.com/Oschowa/gnome-randr/-/raw/master/gnome-randr.py
+[[ -f gnome-randr.py ]] || curl --remote-name --silent $GNOME_RANDR_URI
+
+python3 gnome-randr.py \
+  --output eDP-1 --off \
+  --output DP-2 --primary --mode 1920x1080 \
+  --output DP-3 --mode 1920x1080 --left-of DP-2 \
+  --output DP-4 --mode 1920x1080 --right-of DP-2
